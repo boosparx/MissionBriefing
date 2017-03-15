@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11191" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mission Briefing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MissionBriefingViewController" customModule="MissionBriefing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-Ma-kPV">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Zd7-0I-IdC"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E81-Mn-q8I">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="EEw-wi-UE9"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVw-U5-DJs">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vde-ov-2dg">
+                                <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateAgent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32G-gn-WXT"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RuY-UF-4aK">
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="D7L-BO-9mM"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D7L-BO-9mM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oM-Y8-kBM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D7L-BO-9mM" secondAttribute="bottom" constant="8" id="4b8-mP-H2J"/>
+                            <constraint firstItem="RuY-UF-4aK" firstAttribute="width" secondItem="E81-Mn-q8I" secondAttribute="width" id="AZY-5O-dYz"/>
+                            <constraint firstItem="vde-ov-2dg" firstAttribute="top" secondItem="zVw-U5-DJs" secondAttribute="bottom" constant="8" id="BTB-0w-FGI"/>
+                            <constraint firstItem="DNK-Ma-kPV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Fyh-pE-wnG"/>
+                            <constraint firstItem="E81-Mn-q8I" firstAttribute="top" secondItem="DNK-Ma-kPV" secondAttribute="bottom" constant="8" id="UUU-1A-zdW"/>
+                            <constraint firstItem="vde-ov-2dg" firstAttribute="centerX" secondItem="zVw-U5-DJs" secondAttribute="centerX" id="XMZ-iF-DHu"/>
+                            <constraint firstItem="RuY-UF-4aK" firstAttribute="top" secondItem="vde-ov-2dg" secondAttribute="bottom" constant="8" id="auE-yl-kuW"/>
+                            <constraint firstItem="zVw-U5-DJs" firstAttribute="centerX" secondItem="E81-Mn-q8I" secondAttribute="centerX" id="bUh-Ia-qwx"/>
+                            <constraint firstItem="DNK-Ma-kPV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYe-mL-uYf"/>
+                            <constraint firstItem="zVw-U5-DJs" firstAttribute="top" secondItem="E81-Mn-q8I" secondAttribute="bottom" constant="8" id="mXg-0j-fir"/>
+                            <constraint firstItem="E81-Mn-q8I" firstAttribute="width" secondItem="DNK-Ma-kPV" secondAttribute="width" id="qku-lJ-bbK"/>
+                            <constraint firstItem="RuY-UF-4aK" firstAttribute="centerX" secondItem="vde-ov-2dg" secondAttribute="centerX" id="r7I-FD-rgh"/>
+                            <constraint firstItem="D7L-BO-9mM" firstAttribute="top" secondItem="RuY-UF-4aK" secondAttribute="bottom" constant="8" id="svG-6V-Hzt"/>
+                            <constraint firstItem="E81-Mn-q8I" firstAttribute="centerX" secondItem="DNK-Ma-kPV" secondAttribute="centerX" id="vpd-kl-YEl"/>
+                            <constraint firstItem="DNK-Ma-kPV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="y7z-h9-E8I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="agentUserTextField" destination="DNK-Ma-kPV" id="CF5-0Z-Dd5"/>
+                        <outlet property="briefingTextView" destination="RuY-UF-4aK" id="vNB-x1-JNo"/>
+                        <outlet property="greetingLabel" destination="zVw-U5-DJs" id="08e-45-ZxO"/>
+                        <outlet property="passwordTextField" destination="E81-Mn-q8I" id="r6Z-8M-heS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TIYLogo" width="240" height="212"/>
+    </resources>
+</document>
