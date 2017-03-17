@@ -25,7 +25,7 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
     // 1. The two UI elements need to be emptied on launch
     //    Hint: there is a string literal that represents the empty string
     //
-    greetingLabel.text = <#what should this be assigned?#>
+    greetingLabel.text = ""
     briefingTextView.text = <#what goes here?#>
   }
   
